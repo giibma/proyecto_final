@@ -1,12 +1,15 @@
 /* estilo navbar */
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
-.nav-link {
-  font-size: x-large;
-  color: black; }
-
 .logo {
   width: 100px;
   height: 100px; }
+
+#navbarNavAltMarkup .nav-link {
+  font-size: x-large;
+  color: black; }
+  #navbarNavAltMarkup .nav-link:hover {
+    color: blue;
+    font-style: italic; }
 
 a.btn-social,
 .btn-social {
@@ -91,3 +94,19 @@ a.btn-social,
 
 .btn-twitter:hover {
   background-color: #83c3f3; }
+
+.piePagina {
+  text-align: center; }
+
+.carousel-inner img {
+  width: 500px;
+  height: 500px; }
+
+.container-fluid {
+  height: 100vh; }
+
+body {
+  background-image: linear-gradient(to bottom, #f1e7e7, #b8b8f2); }
+
+.container-fluid {
+  height: 100vh; }

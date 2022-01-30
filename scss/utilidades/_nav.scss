@@ -1,9 +1,16 @@
 /* estilo navbar */
-.nav-link{
-    font-size: x-large;
-    color: black;
-}
+
 .logo{
     width: 100px;
     height: 100px;
+}
+#navbarNavAltMarkup{
+    .nav-link{
+        font-size: x-large;
+        color: black;
+        &:hover{
+            color: blue;
+            font-style: italic;
+        }
+    }
 }

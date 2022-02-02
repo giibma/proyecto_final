@@ -1,0 +1,28 @@
+@import './scss/utilidades/estilos';
+%estiloSomos{
+
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+$resaltarTexto:(
+        mision: blue,
+        vision: green,
+    );
+ .somos{
+    p{
+        @extend %estiloSomos;
+    }
+    
+    @each $frase, $color in $resaltarTexto {
+
+        .#{$frase}{
+            color:$color;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        
+    }
+    
+
+ }

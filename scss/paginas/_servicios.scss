@@ -1,0 +1,16 @@
+@import './scss/utilidades/estilos.scss';
+%estiloServicios{
+    font-size: 30px;
+    font-family: sans-serif;
+
+}
+
+.servicios{
+    p{
+        @extend %estiloServicios;
+    }
+    h1{
+        @include estiloTitulos(red,40px);
+    }
+    
+}

@@ -1,0 +1,6 @@
+@mixin estiloTitulos($color,$tamano)
+ {
+    color: $color;
+    font-size: $tamano;
+    text-decoration: underline;
+}

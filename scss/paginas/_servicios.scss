@@ -1,16 +1,52 @@
 @import './scss/utilidades/estilos.scss';
-%estiloServicios{
+
+%estiloServicios {
     font-size: 30px;
     font-family: sans-serif;
 
 }
 
-.servicios{
-    p{
+.servicios {
+    p {
         @extend %estiloServicios;
     }
-    h1{
-        @include estiloTitulos(red,40px);
+
+    h1 {
+        @include estiloTitulos(red, 40px);
     }
+
+}
+
+.servicios {
+
+
+    img {
+        width: 330px;
+        height: 220px;
+    }
+}
+.contenedor_servicios{
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+}
+
+@media (max-width: 700px) {
+    .contenedor_servicios{
+
+        display: grid;
+        grid-auto-columns: auto;
+        gap: 1px 1px;
+
+    }
+
+}
+@media (min-width: 700px) and (max-width: 1200px) {
+    .contenedor_servicios{
+
+        display: grid;
+    grid-template-rows: 1fr 8.5fr 1fr;
+
+    }
+
     
 }

@@ -1,29 +1,97 @@
 @import './scss/utilidades/estilos';
-%estiloSomos{
+
+%estiloSomos {
 
     font-size: 18px;
     font-family: sans-serif;
     line-height: 1.5;
 }
-$resaltarTexto:(
-        historia: darkviolet,
-        mision: blue,
-        vision: green,
-    );
- .somos{
-    p{
+
+$resaltarTexto:(historia: darkviolet,
+    mision: blue,
+    vision: green,
+);
+
+.mision,
+.vision,
+.historia {
+    p {
         @extend %estiloSomos;
     }
-    
-    @each $frase, $color in $resaltarTexto {
 
-        .#{$frase}{
-            color:$color;
+    @each $frase,
+    $color in $resaltarTexto {
+
+        .#{$frase} {
+            color: $color;
             font-weight: bold;
             font-size: 40px;
         }
-        
-    }
-    
 
- }
+    }
+
+
+}
+
+.contenedor_somos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 3.3fr 3.2fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "historia mision vision"
+        "historia mision vision"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.historia {
+    grid-area: historia;
+}
+
+.mision {
+    grid-area: mision;
+}
+
+.vision {
+    grid-area: vision;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+@media (max-width: 700px) {
+    .contenedor_somos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "historia historia historia"
+        "vision vision vision"
+        "mision mision mision"
+        "footer footer footer";
+}
+}
+
+
+@media (min-width: 700px) and (max-width: 1200px) {
+    .contenedor_somos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.8fr 0.8fr 0.8fr 0.4fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header"
+        "historia"
+        "vision"
+        "mision"
+        "footer";
+}
+}

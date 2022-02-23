@@ -57,7 +57,16 @@
 }
 
 @media (max-width: 700px) {
-    
+    .seccionPrincipal{
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "seccion1" 
+          "seccion2";
+          
+      }
 }
 @media (min-width: 700px) and (max-width: 1200px) {
     

@@ -146,6 +146,14 @@ a.btn-social,
     font-size: xx-large;
     font-style: italic; }
 
+@media (max-width: 700px) {
+  .seccionPrincipal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "seccion1"  "seccion2"; } }
+
 .contenedor_galeria {
   display: grid;
   grid-template-columns: 1fr;
@@ -317,25 +325,71 @@ a.btn-social,
     gap: 0px 0px;
     grid-template-areas: "header header" "servicio1 servicio2" "servicio3 servicio4" "footer footer"; } }
 
-.somos p {
+.mision p,
+.vision p,
+.historia p {
   font-size: 18px;
   font-family: sans-serif;
   line-height: 1.5; }
 
-.somos .historia {
+.mision .historia,
+.vision .historia,
+.historia .historia {
   color: darkviolet;
   font-weight: bold;
   font-size: 40px; }
 
-.somos .mision {
+.mision .mision,
+.vision .mision,
+.historia .mision {
   color: blue;
   font-weight: bold;
   font-size: 40px; }
 
-.somos .vision {
+.mision .vision,
+.vision .vision,
+.historia .vision {
   color: green;
   font-weight: bold;
   font-size: 40px; }
+
+.contenedor_somos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 3.3fr 3.2fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas: "header header header" "historia mision vision" "historia mision vision" "footer footer footer"; }
+
+.header {
+  grid-area: header; }
+
+.historia {
+  grid-area: historia; }
+
+.mision {
+  grid-area: mision; }
+
+.vision {
+  grid-area: vision; }
+
+.footer {
+  grid-area: footer; }
+
+@media (max-width: 700px) {
+  .contenedor_somos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas: "header header header" "historia historia historia" "vision vision vision" "mision mision mision" "footer footer footer"; } }
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  .contenedor_somos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.8fr 0.8fr 0.8fr 0.4fr;
+    gap: 0px 0px;
+    grid-template-areas: "header" "historia" "vision" "mision" "footer"; } }
 
 body {
   font-family: 'Noto Sans', sans-serif; }

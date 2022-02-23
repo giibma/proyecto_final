@@ -4,3 +4,8 @@
 @import './paginas/galeria';
 @import './paginas/servicios';
 @import './paginas/somos';
+@import './paginas/contacto';
+
+body{
+background-image: linear-gradient(to bottom,rgb(240, 238, 238),rgb(190, 195, 197));
+}
